@@ -1,1 +1,11 @@
-<app-servers></app-servers>
+<header-component (featureSelected)="onNavigate($event)"></header-component>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>I am boot strap style</h1>
+            <app-recipes *ngIf="loadedFeature==='recipe'"></app-recipes>
+            <app-shopping-list *ngIf="loadedFeature!=='recipe'"></app-shopping-list>
+            
+        </div>
+    </div>
+</div>
